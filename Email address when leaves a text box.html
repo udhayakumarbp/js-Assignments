@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Write a regular expression to detect email address when leaves a text box</title>
+</head>
+
+<body>
+    <form name="myForm">
+        <input id="demo" type="text" name="email">
+        <input type="submit" value="submit">
+</body>
+<script>
+
+document.getElementById("demo").onmouseenter = function() { mouseEnter() };
+document.getElementById("demo").onmouseleave = function() { mouseLeave() };
+
+function mouseEnter() {
+    document.getElementById("demo").style.color = "black";
+}
+
+function mouseLeave() {
+    var emailid = document.forms["myForm"]["email"].value;
+    var email = emailid.indexOf('@');
+    var check = emailid.endsWith('.com');
+    if (email < 1 || check != true) {
+        document.getElementById("demo").style.color = "red";
+        return false;
+    } else {
+        alert(emailid);
+    }
+}
+</script>
+
+</html>

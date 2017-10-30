@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utfs-8">
+    <title>Write a regular expression in JS to remove all html tags.</title>
+</head>
+
+<body>
+    <h3>Name List</h3>
+    <p>Remove All The HTML Tags</p>
+</body>
+<script type="text/javascript">
+var htmlTagRe = /<\/?[\w\s="/.':;#-\/]+>/gi;
+
+var html = "<div><ul><li>Prakash</li><li> Siva</li><li> Babu</li></ul></div>"
+var plainText = html.replace(htmlTagRe, '');
+var list = plainText.split(" ")
+for (i = 0; i < list.length; i++) {
+    var pElement = document.createElement('li');
+    var textNode = document.createTextNode(list[i]);
+    pElement.appendChild(textNode)
+    document.body.appendChild(pElement);
+}
+</script>
+
+</html>
