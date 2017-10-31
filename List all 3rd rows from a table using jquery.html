@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3rd Rows From a Table Using Jquery </title>
+    <style type="text/css">
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Prakash</td>
+            <td>kumar</td>
+            <td>25</td>
+        </tr>
+        <tr>
+            <td>Siva</td>
+            <td>Prathap</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Murali</td>
+            <td>Kutty</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>sasi</td>
+            <td>kumar</td>
+            <td>26</td>
+        </tr>
+    </table>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('table tr:eq(3)').css('color', "red")
+})
+</script>
+
+</html>

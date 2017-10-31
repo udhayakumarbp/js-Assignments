@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>6rd Column’s From a Table Using Jquery</title>
+    <style type="text/css">
+    table, th, td{
+    		border:2px solid black;
+    		margin: 5px;
+    		padding: 5px;
+    		text-align: center;
+    		border-collapse: collapse;
+
+    	}
+        .color {
+            color : red;
+        }
+
+    
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Emp NAme</th>
+            <th>Country</th>
+            <th>Age</th>
+            <th>Exp</th>
+            <th>State</th>
+            <th>Salary</th>
+        </tr>
+        <tr>
+            <td>Prakash</td>
+            <td>India</td>
+            <td>25</td>
+            <td>2</td>
+            <td>Tamilnadu</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <td>Siva</td>
+            <td>India</td>
+            <td>22</td>
+            <td>1</td>
+            <td>Tamilnadu</td>
+            <td>15000</td>
+        </tr>
+        <tr>
+            <td>Murali</td>
+            <td>India</td>
+            <td>26</td>
+            <td>3</td>
+            <td>Tamilnadu</td>
+            <td>30000</td>
+        </tr>
+        <tr>
+            <td>sasi</td>
+            <td>India</td>
+            <td>26</td>
+            <td>4</td>
+            <td>Tamilnadu</td>
+            <td>50000</td>
+        </tr>
+    </table>
+    
+</body>
+<script type="text/javascript">
+$(document).ready(function () {
+    $('table td:nth-child(6)').css ('color', 'green') 
+})
+</script> 
+
+</html>
